@@ -81,7 +81,7 @@ const Calendar = forwardRef(({
 }: CalendarProps, ref) => {
 
     const currentDate = new Date()
-    const [selectedMonthYear, setSelectedMonthYear] = useState<{ month: number, year: number }>({ "month": currentDate.getMonth(), "year": currentDate.getFullYear() })
+    const [selectedMonthYear, setSelectedMonthYear] = useState<{ month: number, year: number }>({ "month": currentDate.getMonth()+1, "year": currentDate.getFullYear() })
     const [selectedDate, setSelectedDate] = useState<number | null>(currentDate.getDate())
 
     const [daysList, setDaysList] = useState<string[]>(["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"]);
